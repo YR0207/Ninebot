@@ -12,6 +12,9 @@ jobs:
     steps:
       - name: 拉取代码
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT }}   # ✅ 必须要有有效的 Personal Access Token（PAT）才能推送变更
+                                      # 这个 PAT 建议在 Secrets 中配置，必须至少有 repo 权限
 
       - name: 安装Node环境
         uses: actions/setup-node@v4
@@ -22,7 +25,11 @@ jobs:
         run: npm install
 
       - name: 执行签到
-        run: npm start
+        # run: npm start
+        run: |
+          echo "开始执行九号出行签到脚本"
+          npm start 2>&1 | tee script_output.log
+          echo "签到脚本执行完毕"
         env:
           # 从GitHub Secrets读取环境变量（用户需自行配置）
           NINEBOT_NAME: ${{ secrets.NINEBOT_NAME }}
@@ -34,3 +41,11 @@ jobs:
           BARK_ICON: ${{ secrets.BARK_ICON }}
           BARK_URL: ${{ secrets.BARK_URL }}
           # 其他Bark参数按需添加
+      - name: 将脚本运行结果提交至仓库
+        run: |
+          echo "将 script_output.log 提交到仓库"
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add .
+          git diff --cached --quiet || git commit -m "Ninebot workflow log update [${{ github.run_id }}]"
+          git push origin HEAD:main
