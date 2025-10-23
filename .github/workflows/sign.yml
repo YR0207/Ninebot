@@ -46,6 +46,6 @@ jobs:
           echo "将 script_output.log 提交到仓库"
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add .
+          git add script_output.log
           git diff --cached --quiet || git commit -m "Ninebot workflow log update [${{ github.run_id }}]"
           git push origin HEAD:main
