@@ -262,7 +262,7 @@ async function sendBarkNotification(title, message) {
             url += `?${params.join('&')}`;
         }
 
-        console.log(`发送Bark通知: ${url}`);
+        // console.log(`发送Bark通知: ${url}`);
 
         // 发送请求
         const response = await axios.get(url, { timeout: 5000 });
@@ -338,7 +338,7 @@ async function init() {
         return `${status} ${acc.name}\n${acc.logs.replace(/\n/g, "\n  ")}`;
     }).join("\n\n");
 
-    console.log(`message: ${message}`)
+    console.log(`message: \n${message}`)
     // 发送Bark通知
     await sendBarkNotification(title, message);
 }
