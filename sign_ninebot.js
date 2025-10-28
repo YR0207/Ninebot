@@ -338,6 +338,7 @@ async function init() {
         return `${status} ${acc.name}\n${acc.logs.replace(/\n/g, "\n  ")}`;
     }).join("\n\n");
 
+    console.log(`message: ${message}`)
     // 发送Bark通知
     await sendBarkNotification(title, message);
 }
