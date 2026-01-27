@@ -6,10 +6,10 @@
 ===== 开始处理账号: 默认账号 =====
 [默认账号] 开始执行签到任务...
 [默认账号] 验证登录状态并获取签到信息...
-[默认账号] 尝试 1/3: get https://cn-cbu-gateway.ninebot.com/portal/api/user-sign/v2/status?t=1769471885129
+[默认账号] 尝试 1/3: get https://cn-cbu-gateway.ninebot.com/portal/api/user-sign/v2/status?t=1769558264848
 [默认账号] 请求失败 (1/3): read ECONNRESET
-[默认账号] 尝试 2/3: get https://cn-cbu-gateway.ninebot.com/portal/api/user-sign/v2/status?t=1769471885129
-[默认账号] 请求成功: https://cn-cbu-gateway.ninebot.com/portal/api/user-sign/v2/status?t=1769471885129
+[默认账号] 尝试 2/3: get https://cn-cbu-gateway.ninebot.com/portal/api/user-sign/v2/status?t=1769558264848
+[默认账号] 请求成功: https://cn-cbu-gateway.ninebot.com/portal/api/user-sign/v2/status?t=1769558264848
 [默认账号] 验证成功，获取到签到信息
 [默认账号] 开始签到...
 [默认账号] 尝试 1/3: post https://cn-cbu-gateway.ninebot.com/portal/api/user-sign/v2/sign
@@ -17,13 +17,13 @@
 [默认账号] 签到成功
 [默认账号] 签到成功，获取最新签到数据...
 [默认账号] 验证登录状态并获取签到信息...
-[默认账号] 尝试 1/3: get https://cn-cbu-gateway.ninebot.com/portal/api/user-sign/v2/status?t=1769471889328
-[默认账号] 请求成功: https://cn-cbu-gateway.ninebot.com/portal/api/user-sign/v2/status?t=1769471889328
+[默认账号] 尝试 1/3: get https://cn-cbu-gateway.ninebot.com/portal/api/user-sign/v2/status?t=1769558269011
+[默认账号] 请求成功: https://cn-cbu-gateway.ninebot.com/portal/api/user-sign/v2/status?t=1769558269011
 [默认账号] 验证成功，获取到签到信息
 [默认账号] 任务执行完成
 message: 
 ✅ 默认账号
-连续签到天数: 139天
+连续签到天数: 140天
   今日签到状态: 已签到🎉
   签到结果: 签到成功🎉🎉
 Bark通知发送成功
